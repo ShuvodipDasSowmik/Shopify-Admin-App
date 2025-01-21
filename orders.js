@@ -4,7 +4,7 @@ const axios = require("axios");
 
 const router = express.Router();
 
-// Fetch Orders Route
+
 router.get("/orders", async (req, res) => {
     const query = `
         query {
@@ -15,8 +15,12 @@ router.get("/orders", async (req, res) => {
                         createdAt
                         totalPrice
                         customer {
-                            firstName
-                            lastName
+                            displayName
+                            addresses(first: 1){
+                                address1
+                                city
+                                country
+                            }
                             email
                         }
                         lineItems(first: 5) {
@@ -62,7 +66,7 @@ router.get("/orders", async (req, res) => {
     }
 });
 
-// Test Route (POST)
+
 router.post("/orders", (req, res) => {
     res.send("Hemlo");
 });

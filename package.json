@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@shopify/graphql-client": "^1.2.1",
     "@shopify/shopify-api": "^11.7.0",
     "axios": "^1.7.9",
     "cors": "^2.8.5",

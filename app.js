@@ -15,6 +15,12 @@ app.use("/", Restock)
 const Orders = require('./orders')
 app.use("/", Orders)
 
+const collections = require('./collections')
+app.use("/", collections)
+
+const createDiscount = require('./create-discount')
+app.use("/", createDiscount)
+
 const multer = require('multer');
 const fs = require('fs');
 const FormData = require('form-data');
