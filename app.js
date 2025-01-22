@@ -21,6 +21,9 @@ app.use("/", collections)
 const createDiscount = require('./create-discount')
 app.use("/", createDiscount)
 
+const createCollection = require('./create-collection')
+app.use("/", createCollection);
+
 const multer = require('multer');
 const fs = require('fs');
 const FormData = require('form-data');
